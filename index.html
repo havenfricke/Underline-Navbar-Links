@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Underlining</title>
+</head>
+<body>
+    
+
+<script>
+    //Get the current url
+    const url = document.URL;
+    //Store navigation links by id in a variable
+	const l1 = document.getElementById("l1");
+	const l2 = document.getElementById("l2"); 
+	const l3 = document.getElementById("l3"); 
+	const l4 = document.getElementById("l4"); 
+	const l5 = document.getElementById("l5"); 
+	const l6 = document.getElementById("l6");
+	const l7 = document.getElementById("l7");
+    //Create an if statement to return true or false if the current url matches.
+    //Add a class name that adds a bottom border if the current url matches, else, console log a message.
+	if (url.includes('https://yourwebsitehere/services/')){
+		l1.classList.add("border-bottom");
+		} else if (url.includes('https://yourwebsitehere/portfolio/')){
+		l2.classList.add("border-bottom");
+		} else if (url.includes('https://yourwebsitehere/about/')){
+		l3.classList.add("border-bottom");
+		} else if (url.includes('https://yourwebsitehere/contact/')){
+		l4.classList.add("border-bottom");
+		} else {
+		console.log('Link underlining has not been set up for this page - go to line 150 in header.php or "Theme Header"');
+		};
+</script>    
+<style>
+    .border-bottom{
+        border-bottom: 1px solid #dee2e6 !important
+    }
+</style>
+</body>
+</html>
